@@ -1,12 +1,204 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Homepage</title>
-  </head>
-  <body>
-    <h1>Hello, this is my homepage.</h1>
-    <p>It works!</p>
-  </body>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Milton Zhou</title>
+  <meta name="description" content="Homepage of Milton Zhou." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <a href="#home">Milton Zhou</a>
+      </div>
+      <nav class="nav">
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#service">Service</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page" id="home">
+    <!-- Left column -->
+    <aside class="sidebar">
+      <div class="card profile">
+        <div class="avatar">
+          <img src="assets/profile.jpg" alt="Profile photo" />
+        </div>
+
+        <h1 class="name">Milton Zhou</h1>
+        <div class="title">PhD Student / Researcher</div>
+        <div class="affil">Your Institution · City, Country</div>
+
+        <div class="links">
+          <a href="mailto:you@example.com">Email</a>
+          <a href="https://github.com/ItzMilton" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
+          <a href="assets/CV.pdf" target="_blank" rel="noreferrer">CV</a>
+        </div>
+
+        <div class="small">
+          <div><strong>Research:</strong> Multimodal foundation models, video/audio understanding, ad creative editing.</div>
+          <div class="mt8"><strong>Keywords:</strong> retrieval, tokenization, copula/time-series (optional).</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Quick Links</h2>
+        <ul class="bullets">
+          <li><a href="#publications">Selected publications</a></li>
+          <li><a href="#projects">Open-source projects</a></li>
+          <li><a href="#contact">Contact & socials</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Right column -->
+    <section class="content">
+      <section class="card">
+        <h2>About</h2>
+        <p class="lead">
+          写 3–5 句你的介绍：你是谁、做什么方向、目前在什么机构、你关注的问题与方法。
+          建议一句话概括你的主线研究 + 一句提到你最代表性的项目/论文。
+        </p>
+        <p>
+          （可选）再补一段：你对外合作、实习经历、或者你正在做的长期项目。整体保持精炼。
+        </p>
+      </section>
+
+      <section class="card" id="news">
+        <div class="section-head">
+          <h2>News</h2>
+          <button class="ghost" data-action="toggle-news" aria-expanded="true">Collapse</button>
+        </div>
+        <ul class="news" data-news>
+          <li><span class="date">2026-03</span> Launched personal homepage on GitHub Pages.</li>
+          <li><span class="date">2026-02</span> (Example) Paper submitted to ICML 2026: <em>Sequential Conformal Prediction for Time Series</em>.</li>
+          <li><span class="date">2025-12</span> (Example) Project update: AdAutoCut dataset/tools in progress.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="publications">
+        <div class="section-head">
+          <h2>Selected Publications</h2>
+          <a class="muted" href="https://scholar.google.com/" target="_blank" rel="noreferrer">Full list →</a>
+        </div>
+
+        <div class="pub">
+          <div class="pub-title">Digital technologies.</div>
+          <div class="pub-meta">
+            <strong>Your Name</strong>, Coauthor A, Coauthor B. <em>Journal of Digital Economy</em>, 2024.
+          </div>
+          <div class="pub-links">
+            <a href="#" onclick="return false;">paper</a>
+            <a href="#" onclick="return false;">bibtex</a>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-title">Sequential Conformal Prediction for Time Series: a Distributional Method.</div>
+          <div class="pub-meta">
+            <strong>Your Name</strong>, Coauthor A. (Submission) ICML 2026.
+          </div>
+          <div class="pub-links">
+            <a href="#" onclick="return false;">paper</a>
+            <a href="#" onclick="return false;">code</a>
+          </div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-title">Profitability of digital technologies.</div>
+          <div class="pub-meta">
+            <strong>Your Name</strong>. Under review, 2025.
+          </div>
+          <div class="pub-links">
+            <a href="#" onclick="return false;">preprint</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="projects">
+        <h2>Projects</h2>
+
+        <div class="proj">
+          <div class="proj-title">AdAutoCut</div>
+          <div class="proj-desc">
+            A multimodal foundation pipeline for advertisement video editing (video/audio/text), including tokenization,
+            retrieval, and evaluation tasks.
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/AdAutoCut/adautocut.github.io" target="_blank" rel="noreferrer">project page</a>
+            <a href="https://github.com/AdAutoCut" target="_blank" rel="noreferrer">github org</a>
+          </div>
+          <div class="tags">
+            <span class="tag">multimodal</span>
+            <span class="tag">video</span>
+            <span class="tag">audio</span>
+            <span class="tag">dataset</span>
+          </div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-title">Time-series & Copula Toolkit</div>
+          <div class="proj-desc">
+            (Optional) Tools for dependence modeling, structural breaks, rolling Kendall’s τ, and empirical PIT workflows.
+          </div>
+          <div class="proj-links">
+            <a href="#" onclick="return false;">repo</a>
+            <a href="#" onclick="return false;">docs</a>
+          </div>
+          <div class="tags">
+            <span class="tag">time series</span>
+            <span class="tag">copula</span>
+            <span class="tag">econometrics</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="service">
+        <h2>Service</h2>
+        <ul class="bullets">
+          <li>Reviewer: (Example) NeurIPS / ICML / CVPR</li>
+          <li>Teaching assistant: (Example) Econometrics / ML systems</li>
+          <li>Open-source: maintaining AdAutoCut utilities</li>
+        </ul>
+      </section>
+
+      <section class="card" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div>
+            <div class="label">Email</div>
+            <div><a href="mailto:you@example.com">you@example.com</a></div>
+          </div>
+          <div>
+            <div class="label">GitHub</div>
+            <div><a href="https://github.com/ItzMilton" target="_blank" rel="noreferrer">@ItzMilton</a></div>
+          </div>
+          <div>
+            <div class="label">Location</div>
+            <div>Los Angeles, CA (optional)</div>
+          </div>
+          <div>
+            <div class="label">Updated</div>
+            <div id="updated"></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>© <span id="year"></span> Milton Zhou</span>
+        <span class="dot">·</span>
+        <span class="muted">Built with plain HTML/CSS, hosted on GitHub Pages.</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="assets/main.js"></script>
+</body>
 </html>
