@@ -127,6 +127,45 @@ p{line-height:1.85;margin:10px 0 0;}
 .muted{color:var(--muted);}
 
 /* Education & Experience */
+.edu-entry{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap:14px;
+  padding:14px 0;
+  border-top:1px solid var(--line);
+}
+
+.edu-entry:first-of-type{
+  border-top:none;
+  padding-top:4px;
+}
+
+.edu-left{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  min-width:0;
+}
+
+.edu-logo{
+  width:34px;
+  height:34px;
+  flex:0 0 34px;
+  margin-top:2px;
+}
+
+.edu-logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+.edu-main{
+  min-width:0;
+}
+
+
 .subsection{
   margin-top:8px;
 }
@@ -289,5 +328,9 @@ p{line-height:1.85;margin:10px 0 0;}
   }
   .entry-date{
     white-space:normal;
+  }
+  .edu-entry{
+    grid-template-columns:1fr;
+    gap:6px;
   }
 }
